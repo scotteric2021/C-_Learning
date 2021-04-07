@@ -6,10 +6,10 @@ function for taking the sum of two doubles.
 // To make the prorgram output the sum of 2 integer uncomment lines 11 through 28
 // For the sum of 2 doubles leave lines 30 to 44 uncommented.  Both use the same header lines 8 to 10.
 #include <iostream>
-
+#include <cstdlib>
 using namespace std;
 
-int sum3(const int, const int, const int);
+/*int sum3(const int, const int, const int);
 int sum4(const int, const int, const int, const int);
 
 int sum(const int x, const int y)
@@ -48,7 +48,7 @@ int main()
     
     return 0;
 }
-
+*/
 /*
 double sum(const double x, const double y)
 {
@@ -83,7 +83,7 @@ If the integer version was used then the output would only show the truncated in
 Write 2 more functions such that you can find the sum of anywhere between 2 and 4 integers
 by writing sum(num1, num2, ...).
 */
-
+/*
 int sum3 (const int x, const int y, const int z)
 {
     return (x + y + z);
@@ -93,7 +93,7 @@ int sum4 (const int x, const int y, const int z, const int a)
 {
     return (x + y + z + a);
 }
-
+*/
 /* 4.4
 Now write just one function that, using default arguments, allows you to take the sum of
 anywhere between 2 and 4 integers. What would happen if you put both this definition and
@@ -113,4 +113,50 @@ Write a single sum function capable of handling an arbitrary number of integers.
 take two arguments, include a loop, and return an integer. (Hint: What data types can you
 use to represent an arbitrarily large set of integers in two arguments?)
 */
+/*
+int sum(const int numbers[], const int numbersLen)
+{
+    int sum = 0;
+    for (int i = 0; i < numbersLen; i++)
+    {
+        sum += numbers[i];
+    }
+    return sum;
+}
 
+*/
+
+//4.6 same function as above using recursion instead of for loop
+/*
+int sum ( const int numbers [] , const int numbersLen )
+{
+    return numbersLen == 0 ? 0 : numbers [0] + sum ( numbers + 1 , numbersLen - 1) ;
+}
+*/
+// I don't understand what is happening here.
+
+#include <cmath>
+#include <cstdio>
+
+int main()
+{
+    int total = 0, howMany, inside = 0;
+    double area = 0.0, pi;
+    cout << "How many times should this loop run?";
+    cin >> howMany;
+    srand(0);
+    for (total; total < howMany; total++)
+    {
+        
+        double x = rand() / (double)RAND_MAX, y = rand() / (double)RAND_MAX;
+        if (sqrt(x * x + y * y) < 1)
+        {
+            inside += 1;
+            ;
+        }
+    }
+    area = 4 * inside / static_cast<double>(total);
+    pi = area;
+    cout << pi;
+    return 0;
+}

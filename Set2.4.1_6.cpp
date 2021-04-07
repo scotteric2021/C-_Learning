@@ -93,3 +93,24 @@ int sum4 (const int x, const int y, const int z, const int a)
 {
     return (x + y + z + a);
 }
+
+/* 4.4
+Now write just one function that, using default arguments, allows you to take the sum of
+anywhere between 2 and 4 integers. What would happen if you put both this definition and
+your 3-argument function from part 3 into the same file, and called sum(3, 5, 7)? Why?
+
+int sum(const int x, const int y, const int z = 0, const int a = 0)
+{
+    return (x + y + z + a);
+}
+
+The compiler would be confused by the call to multiple funtions named "sum".  The names of the individual
+funtions must be differentiated.  Hence "sum", "sum3" and "sum4"
+*/
+
+/*
+Write a single sum function capable of handling an arbitrary number of integers. It should
+take two arguments, include a loop, and return an integer. (Hint: What data types can you
+use to represent an arbitrarily large set of integers in two arguments?)
+*/
+

@@ -6,3 +6,6 @@ Future problem sets will be labeled by the [setNumber].[sectionNumber].[problemN
 
 ## Array_Play.cpp
 This file uses an array to store values 33 through 126 and then displays both the integer value and the character from the ASCII table.
+
+## Set2.4.1_6.cpp
+Includes problem 5.1 to 5.5.  This program approximates the value of pi using an area formula and pseudo-random number generation.

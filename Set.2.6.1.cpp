@@ -1,13 +1,14 @@
 #include <iostream>
 
-
+using namespace std;
+int fibArray[] = {1, 1, 2, 3, 5, 8, 13};
 
 void printArray(const int array[], const int arrayLen)
 {
-    for(int i = 0; i < arrayLen; ++i)
+    for(int i = 0; i < arrayLen; i++)
     {
         cout << array[i];
-        if (i = arrayLen - 1)
+        if (i < arrayLen - 1)
         {
             cout << ", ";
         }
@@ -15,7 +16,18 @@ void printArray(const int array[], const int arrayLen)
     
 }
 
-void reverseArray(array[], arrayLen)
+void reverseArray(int array[], const int arrayLen)
 {
-    
+    int tempArray[] = {0};
+    for (int i = 0; i < arrayLen / 2; ++i)
+    {
+        tempArray[i]= array[i];
+        array[i] = tempArray[arrayLen - i];
+    }
+}
+int main()
+{
+    printArray(fibArray, 7);
+    reverseArray(fibArray, 7);
+    return 0;
 }
